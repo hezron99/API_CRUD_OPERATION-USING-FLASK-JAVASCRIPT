@@ -1,22 +1,21 @@
 {% extends 'base.html' %}
 {% block title %} Update form {% endblock %}
 {% block content %}
-<div class="container">
-    <p id="message_updt"></p>
-    <form id="form_update" action=`/update/${id}` method="POST">
-        <div class="mb3">
-            <input type="text" id="username_updt" class="form-control form-control-lg" placeholder="User Name">
-        </div>
-        <div class="mb3">
-            <input type="email" id="email_updt" class="form-control form-control-lg" placeholder="Email Address">
-        </div>
-        <div class="mb3">
-            <button class="btn btn-primary mt-4" type="submit" id="submit">Update</button>
-        </div>
-    </form>
-    <script src="../static/update.js"></script>
-    <div class="mt-3">
-        <a href="{{ url_for('display') }}" class="btn btn-success">Back</a>
+
+<p id="message_updt"></p>
+<form id="form_update" action=`/update/${id}` method="POST">
+    <div class="mb3">
+        <input type="text" id="username_updt" class="form-control form-control-lg" placeholder="User Name">
     </div>
+    <div class="mb3">
+        <input type="email" id="email_updt" class="form-control form-control-lg" placeholder="Email Address">
+    </div>
+    <div class="mb3">
+        <button class="btn btn-primary mt-4" type="submit" id="submit">Update</button>
+    </div>
+</form>
+<div class="mt-3">
+    <a href="{{ url_for('display') }}" class="btn btn-success">Back</a>
 </div>
+
 {% endblock %}
